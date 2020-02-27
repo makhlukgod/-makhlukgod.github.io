@@ -1055,6 +1055,10 @@ body .cards .cards_cours .cards_cours_description .cards_cours_title {
   border-bottom: 1px inset #f4f3f7;
 }
 
+body .cards .cards_cours .cards_cours_description .cards_cours_title svg {
+  fill: #fff324;
+}
+
 body .cards .cards_cours .cards_cours_description .cards_cours_title h4 {
   font-size: 18px;
 }
@@ -1077,7 +1081,7 @@ body .cards .cards_cours .cards_cours_description .cards_cours_center {
       grid-template-rows: 30px 14px;
   border-radius: 4px;
   padding: 8px;
-  background: #fff324;
+  background: #f4f3f7;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
