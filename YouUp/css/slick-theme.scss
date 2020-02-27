@@ -11,12 +11,12 @@
     line-height: 0;
 
     position: absolute;
-    top: 50%;
+    top: 47%;
 
     display: block;
 
     width: 20px;
-    height: 20px;
+    height: 32px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -68,6 +68,7 @@
 .slick-prev
 {
     left: -25px;
+    transform: rotate(180deg);
 }
 [dir='rtl'] .slick-prev
 {
@@ -76,11 +77,11 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2024%2024%22%20%20height%3D%2248%22%20%3E%3Cpath%20%20stroke%3D%22%23cf1415%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M9.5%207l5%205M9.5%2017l5-5%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E); 
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2024%2024%22%20%20height%3D%2248%22%20%3E%3Cpath%20%20stroke%3D%22%23cf1415%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M9.5%207l5%205M9.5%2017l5-5%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E);
 }
 
 .slick-next
@@ -94,11 +95,11 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2024%2024%22%20%20height%3D%2248%22%20%3E%3Cpath%20%20stroke%3D%22%23cf1415%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M9.5%207l5%205M9.5%2017l5-5%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E);
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2024%2024%22%20%20height%3D%2248%22%20%3E%3Cpath%20%20stroke%3D%22%23cf1415%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M9.5%207l5%205M9.5%2017l5-5%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E); 
 }
 
 /* Dots */
