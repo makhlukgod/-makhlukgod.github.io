@@ -7,8 +7,8 @@ body{
 header{
   display: grid; 
   grid-template-columns: 210px 1fr;
-    justify-items: end;
-    align-items: center;
+  justify-items: end;
+  align-items: center;
   height: 60px;
   width: 100%;
   background: $grey; 
@@ -23,15 +23,8 @@ header{
   }
   .select_hotel{
     padding: 0 230px;
-    .dropdown{
-      padding: 8px;
-      border-radius: 4px;
-      outline: none;
-      border: 1px solid #ffffff;
-      font-size: 20px;
-      font-weight: 500;
-      background-color: #fff;
-    }
+    font-size: 16px;
+    font-weight: 500;
   }
 
 
@@ -50,8 +43,24 @@ header{
       width: 100%;
       .content_header{
         background: $green;
-        text-align: center;   
-      }      
+        text-align: center;           
+      }     
+      .content_body{
+        form{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          row-gap: 15px;
+          width: 700px;
+          padding: 20px;
+          margin: 0 auto;
+          .form_btn{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            
+           }
+        }
+      } 
     }
 
 }

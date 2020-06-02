@@ -33,11 +33,11 @@
          </label>
      
          <ul class="menu__box">
-           <li><a class="menu__item active" href="/about">О отеле</a></li>
-              <li><a class="menu__item" href="/numberrooms">Номерной фонд</a></li>
-              <li><a class="menu__item" href="/chess">Шахматка</a></li>
-              <li><a class="menu__item" href="/prices">Тарифы и Цены</a></li>
-              <li><a class="menu__item" href="/saleschannels">Каналы Продаж</a></li>
+           <li><a class="menu__item active" href="#about">О отеле</a></li>
+              <li><a class="menu__item" href="#numberrooms">Номерной фонд</a></li>
+              <li><a class="menu__item" href="#chess">Шахматка</a></li>
+              <li><a class="menu__item" href="#prices">Тарифы и Цены</a></li>
+              <li><a class="menu__item" href="#saleschannels">Каналы Продаж</a></li>
          </ul>
        </div>
        <div class="content">
@@ -46,23 +46,25 @@
           </div>
           <div class="content_body">
              <form action="">
-                <input type="text">
+                <p>Название отеля:</p>
+                <input type="text" placeholder="Название отеля">
+
+                <p>Валюта:</p>
                 <select class="dropdown">
-                  <option value="" class="label">Название отеля</option>
-                  <option value="1">Отель 1</option>
-                  <option value="2">Отель 2</option>
-                  <option value="3">Отель 3</option>
-                  <option value="4">Отель 4</option>
-                  <option value="5">Отель 5</option>
+                  <option value="" class="label">Тайский бат (TNB)</option>
+                  <option value="1">Доллар</option>
+                  <option value="2">Евро</option> 
                </select>
+
+               <p>Часовой пояс:</p>  
                <select class="dropdown">
-                  <option value="" class="label">Название отеля</option>
-                  <option value="1">Отель 1</option>
-                  <option value="2">Отель 2</option>
-                  <option value="3">Отель 3</option>
-                  <option value="4">Отель 4</option>
-                  <option value="5">Отель 5</option>
+                  <option value="" class="label">(UTC +7:00) Новосибирск, Бангкок</option>
+                  <option value="1">(UTC +3:00) Москва</option> 
                </select>
+               <div class="form_btn">
+                  <button id="form_save">Сохранить</button>
+                  <button id="form_close">Отменить</button>
+               </div>
              </form>
           </div>
        </div>
