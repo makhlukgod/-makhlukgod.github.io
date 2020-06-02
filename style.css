@@ -220,6 +220,7 @@ header .select_hotel {
 .main .content .content_header {
   background: #6cd900;
   text-align: center;
+  color: #fff;
 }
 
 .main .content .content_body form {
