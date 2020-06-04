@@ -1,0 +1,22 @@
+$grey: #f6f6f6;
+$green: #6cd900;
+$green_text: #69d500;
+$blue: #00add8;
+
+
+
+select, input, button{
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #a5a5a5; 
+    background-color: #fff; 
+    cursor: pointer;
+}
+    
+button{
+    background-image: linear-gradient(to top, #ffc000, #ffde2a);
+    padding: 5px 25px;
+    border: none;
+    font-size: 14px;
+  }
