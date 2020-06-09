@@ -16,8 +16,11 @@
   }
   #menu__toggle:checked ~ .menu__box {
     visibility: visible;
-    left: 0;  
-    display: block;  
+    left: 0; 
+
+    
+    display: block; 
+    width: 300px;    
     height: calc(100vh - 60px);
     
   } 
