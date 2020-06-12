@@ -47,44 +47,6 @@ input, button, textarea, select {
   }
 }
 
-select, input, button {
-  padding: 8px;
-  border-radius: 4px;
-  outline: none;
-  border: 1px solid #a5a5a5;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.btn_yellow {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffc000), to(#ffde2a));
-  background-image: linear-gradient(to top, #ffc000, #ffde2a);
-  padding: 5px 25px;
-  border: none;
-  font-size: 14px;
-}
-
-.btn_green {
-  padding: 2px 5px;
-  border: solid 1px #6cd900;
-  font-size: 10px;
-  color: #6cd900;
-}
-
-.btn_blue {
-  padding: 2px 5px;
-  border: solid 1px #00add8;
-  font-size: 10px;
-  color: #00add8;
-}
-
-.btn_emo {
-  border: none;
-  padding: 2px 5px;
-  text-decoration: underline;
-  color: #000;
-}
-
 #menu__toggle {
   opacity: 0;
   display: none;
@@ -179,10 +141,15 @@ select, input, button {
 
 .menu__box .active {
   color: #69d500;
+  background-color: #f6f6f6;
 }
 
 .menu__item:hover {
   background-color: #CFD8DC;
+}
+
+.active {
+  background-color: #6cd900;
 }
 
 body {
@@ -216,7 +183,7 @@ header .logo img {
 }
 
 header .select__hotel {
-  padding: 0 230px;
+  padding-right: 10%;
   font-size: 16px;
   font-weight: 500;
 }
@@ -242,17 +209,13 @@ header .select__hotel {
   display: grid;
   grid-auto-flow: column;
   margin-bottom: 5px;
+  background: #00add8;
 }
 
 .main .content .content_links .content_links_item {
   text-align: center;
   color: #fff;
-  background: #00add8;
   text-decoration: none;
-}
-
-.main .content .content_links .active {
-  background: #6cd900;
 }
 
 .main .content .content__header {
@@ -358,32 +321,186 @@ header .select__hotel {
 }
 
 /* prices*/
-.prices .prices__header {
-  font-size: 16px;
-  padding: 10px 3vw;
+.prices .rate {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.prices .rate__left-title {
+.prices .rate th, .prices .rate td {
+  border: 1px solid #c5c5c5;
+  min-width: 50px;
+  text-align: center;
+}
+
+.prices .rate .holiday {
+  background: #fff4f4;
+}
+
+.prices .rate .rate__header {
+  caption-side: top;
+  text-align: left;
+  padding: 10px 70px;
+  font-size: 17px;
+}
+
+.prices .rate .rate__left-title {
   font-size: 13px;
+  background: #fff;
+  width: 20%;
+  min-width: 95px;
+  text-align: left;
+  padding-left: 10px;
 }
 
-.prices .rate__dates .rate__dates-w {
+.prices .rate .rate__date .rate__date-w {
   font-size: 10px;
 }
 
-.prices .rate__dates .rate__dates-m {
-  font-size: 10px;
+.prices .rate .rate__date .rate__date-m {
+  font-size: 12px;
+  font-weight: 100;
 }
 
-.prices .rate__dates .rate__dates-d {
+.prices .rate .rate__date .rate__date-d {
   font-size: 13px;
 }
 
-.prices .rate__prices-item p {
-  font-size: 13px;
-}
-
-.prices .rate__status-item {
+.prices .rate .rate__status {
   background: #ffc000;
+}
+
+.prices .rate .rate__prices-item {
+  font-size: 13px;
+}
+
+.prices .rate .svg-lock {
+  width: 12px;
+  margin: 0 auto;
+}
+
+/*panel*/
+.panel {
+  background: #f6f6f6;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 10% 20px 0;
+}
+
+.panel .calendar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 10px;
+}
+
+.panel .calendar button {
+  border-radius: 0px;
+  border: none;
+  background: #e4e4e4;
+  height: 40px;
+  padding: 0 1.2em;
+}
+
+.panel .calendar button:hover {
+  background: #d3d3d3;
+}
+
+.panel .calendar .calendar__select {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 1px;
+}
+
+.panel .calendar .calendar__select .calendar__icon {
+  border-radius: 4px 0 0 4px;
+}
+
+.panel .calendar .calendar__select .calendar__icon .svg-calendar {
+  height: 16px;
+}
+
+.panel .calendar .calendar__select .calendar__today {
+  border-radius: 0 4px 4px 0;
+}
+
+.panel .calendar .calendar__move {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 1px;
+}
+
+.panel .calendar .calendar__move .move__prev {
+  border-radius: 4px 0 0 4px;
+}
+
+.panel .calendar .calendar__move .move__next {
+  border-radius: 0 4px 4px 0;
+}
+
+.panel .calendar .calendar__move .svg-prev {
+  height: 10px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.panel .calendar .calendar__move .svg-next {
+  height: 10px;
+}
+
+select, input, button {
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #a5a5a5;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn_yellow {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffc000), to(#ffde2a));
+  background-image: linear-gradient(to top, #ffc000, #ffde2a);
+  padding: 5px 25px;
+  border: none;
+  font-size: 14px;
+}
+
+.btn_green {
+  padding: 2px 5px;
+  border: solid 1px #6cd900;
+  font-size: 10px;
+  color: #6cd900;
+}
+
+.btn_blue {
+  padding: 2px 5px;
+  border: solid 1px #00add8;
+  font-size: 10px;
+  color: #00add8;
+}
+
+.btn_emo {
+  border: none;
+  padding: 2px 5px;
+  text-decoration: underline;
+  color: #000;
+}
+
+.bg-orange {
+  background-color: #ffc000;
+}
+
+.bg-blue {
+  background-color: #00add8;
 }
 /*# sourceMappingURL=index.css.map */

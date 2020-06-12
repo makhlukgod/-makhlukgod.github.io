@@ -1,6 +1,10 @@
 @import "modern-css-reset.scss";
 @import "_vars.scss";
 @import "_menu.scss";
+
+.active{            
+  background-color: $green;
+}
 body{
   font-family: sans-serif;
 }
@@ -22,7 +26,7 @@ header{
     }
   }
   .select__hotel{
-    padding: 0 230px;
+    padding-right: 10%;
     font-size: 16px;
     font-weight: 500;
   }
@@ -45,16 +49,14 @@ header{
         display: grid;
         grid-auto-flow: column;
         margin-bottom: 5px;
+        background: $blue; 
         .content_links_item{
           text-align: center;  
           color: #fff;          
-          background: $blue; 
+          
           text-decoration: none;         
           
-        } 
-        .active{            
-          background: $green;
-        }
+        }  
       }
       .content__header{
         background: $green;
@@ -160,38 +162,133 @@ header{
 }
 
 /* prices*/
-.prices{      
-    .prices__header {
-      font-size: 16px;
-      padding: 10px 3vw;
-    }
-    .rate__left-title {
-      font-size: 13px;
-    }
-    .rate__dates{
-      .rate__dates-w {
-        font-size: 10px;
+.prices{   
+    .rate{
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+      th, td{
+        border: 1px solid $grey*0.8;
+        min-width: 50px;
+        text-align: center;
       }
-  
-      .rate__dates-m {
-        font-size: 10px;
+      .holiday{
+        background: #fff4f4;
       }
-  
-      .rate__dates-d {
-        font-size: 13px;
+      .rate__header {
+        caption-side: top;
+        text-align: left;
+        padding: 10px 70px; 
+        font-size: 17px;
       }
-    }
+      .rate__left-title {
+          font-size: 13px;
+          background:#fff ;
+          width: 20%;
+          min-width: 95px;
+          text-align: left;
+          padding-left: 10px;
+      }
+      .rate__date{
+          .rate__date-w {
+            font-size: 10px;
+          }
+      
+          .rate__date-m {
+            font-size: 12px;
+            font-weight: 100;
+          }
+      
+          .rate__date-d {
+            font-size: 13px;
+          }
+      }
+        
+        .rate__status {
+          background: $orange;
+        } 
+    
+        
+    
+    
+    
+        .rate__prices-item  {
+          font-size: 13px;
+        }
+        .svg-lock{
+          width: 12px;
+          margin: 0 auto;
+        }
 
+    }
     
 
-
-
-    .rate__prices-item p {
-      font-size: 13px;
+}
+/*panel*/
+.panel{
+  background: $grey;
+  position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 10% 20px 0;
+  
+.calendar{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: right;
+  gap: 10px;
+  button{
+    border-radius: 0px; 
+    border: none;  
+    background: #e4e4e4;
+    height: 40px;
+    padding: 0 1.2em;
+    &:hover {
+      background: #d3d3d3;
+    }
+  }
+  .calendar__select{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1px;
+    .calendar__icon{
+      border-radius: 4px 0 0 4px;
+      .svg-calendar {
+        height: 16px;
     }
 
-    .rate__status-item {
-      background: #ffc000;
     }
+    .calendar__today{
+      border-radius:   0 4px 4px 0;
+
+    }
+  }
+  .calendar__move{
+     
+      display: grid; 
+      grid-template-columns: auto auto;
+      gap: 1px;
+      .move__prev {
+      border-radius: 4px 0 0 4px;
+      
+      }
+      .move__next {
+      border-radius:   0 4px 4px 0;
+      }
+
+
+    .svg-prev{
+      height: 10px;
+      transform: rotate(180deg);
+    }
+    .svg-next{
+      height: 10px;
+    }
+  }
+}
 
 }
+
+
+@import "_patterns.scss";
