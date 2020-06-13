@@ -168,7 +168,7 @@
                   <tbody>
                      <tr  class="rate__prices">
                         <td  class="rate__left-title">
-                           <button id="form__close" class="btn_blue">Цена за номер</button>
+                           <button   class="btn_blue" onclick="openFormPrice()">Цена за номер</button>
                            </td>
                         
                         <td  class="rate__prices-item holiday"> 
@@ -748,8 +748,60 @@
        </div>
 
    </div>
-   
-  
+   <div class="form-popup" id="priceForm">
+      <form action="#" class="form-container">
+         <fieldset>
+            <legend>Даты:</legend>
+
+            <div class="form-popup__date">
+               <label for="with-data">С:</label>
+               <input type="date" name="with-data" required>
+            </div>
+            <div class="form-popup__date">
+               <label for="for-data">По:</label>
+               <input type="date" name="for-data" required>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Категории номеров:</legend>
+            <div class="form-popup__cat"> 
+               <div>
+                  <input type="radio" id="contactChoice1" name="cat" value="1">
+                  <label for="contactChoice1">Эконом</label>
+               </div>
+               <div> 
+                  <input type="radio" id="contactChoice1" name="cat" value="1">
+                  <label for="contactChoice1">Стандарт</label>        
+               </div>
+               <div> 
+                  <input type="radio" id="contactChoice1" name="cat" value="1">
+                  <label for="contactChoice1">Люкс</label> 
+               </div>
+            </div>
+          </fieldset>
+          <div>
+            <label for="with-data">Цена за номер:</label>
+            <input type="number" name="with-data" required>
+            <p>TNB</p>
+          </div>
+         
+        
+    
+        
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+   <script>
+      function openFormPrice() {
+        document.getElementById("priceForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("priceForm").style.display = "none";
+      }
+    </script>
    
   
 </body>
