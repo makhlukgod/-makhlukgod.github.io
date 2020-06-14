@@ -499,7 +499,7 @@ header .select__hotel {
   display: grid;
   -ms-grid-columns: (minmax(120px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 5px;
+  gap: 30px;
 }
 
 /* Add styles to the form container */
