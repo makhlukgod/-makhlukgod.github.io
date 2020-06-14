@@ -34,39 +34,33 @@
      
     
          <ul class="menu__box">
-            <li><a class="menu__item active" href="index.html">О отеле</a></li>
+            <li><a class="menu__item " href="index.html">О отеле</a></li>
                <li><a class="menu__item " href="numberrooms.html">Номерной фонд</a></li>
                <li><a class="menu__item" href="chess.html">Шахматка</a></li>
                <li><a class="menu__item" href="prices.html">Тарифы и Цены</a></li>
-               <li><a class="menu__item" href="saleschannels.html">Каналы Продаж</a></li>
+               <li><a class="menu__item active" href="saleschannels.html">Каналы Продаж</a></li>
           </ul>
        </div>
        <div class="content">
           <div class="content__header">
-             <p>О отеле (название отеля)</p>
+             <p>Каналы Продаж (название отеля)</p>
           </div>
           <div class="content__body">
-             <form action="" class="about">
-                <p>Название отеля:</p>
-                <input type="text" placeholder="Название отеля">
-
-                <p>Валюта:</p>
-                <select class="">
-                  <option value="" class="label">Тайский бат (TNB)</option>
-                  <option value="1">Доллар</option>
-                  <option value="2">Евро</option> 
-               </select>
-
-               <p>Часовой пояс:</p>  
-               <select class="">
-                  <option value="" class="label">(UTC +7:00) Новосибирск, Бангкок</option>
-                  <option value="1">(UTC +3:00) Москва</option> 
-               </select>
-               <div class="about__btn">
-                  <button id="form__save" class="btn_yellow">Сохранить</button>
-                  <button id="form__close" class="btn_yellow">Отменить</button>
-               </div>
-             </form>
+              <div class="saleschannels"> 
+                  <ul class="saleschannels-table">
+                     <li> <p class="saleschannels-header">Канал</p></li> 
+                     <li> <p class="saleschannels-header">Статус</p></li>
+                     <li> <button class="saleschannels-title"><p>Лого Booking</p></button></li>
+                     <li> <p>✔️</p></li>
+                     <li> <button class="saleschannels-title"><p>Лого AirBnB</p></button></li>
+                     <li> <p>✔️</p></li>
+                     <li> <button class="saleschannels-title"><p>Лого Agoda</p></button></li>
+                     <li> <p>❌</p></li>
+                     <li> <button class="saleschannels-title"><p>Лого Expedia</p></button></li>
+                     <li> <p>❌</p></li> 
+                      
+                    </ul>   
+              </div>
           </div>
        </div>
 

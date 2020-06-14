@@ -1,0 +1,197 @@
+@import "modern-css-reset.scss";
+@import "_vars.scss";
+@import "_menu.scss";
+body{
+  font-family: sans-serif;
+}
+header{
+  display: grid; 
+  grid-template-columns: 210px 1fr;
+  justify-items: end;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background: $grey; 
+  position:relative;
+  z-index:1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  .logo{
+    padding-left: 60px;
+    img{
+      height: 40px;
+    }
+  }
+  .select__hotel{
+    padding: 0 230px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+
+ 
+   
+} 
+
+.main{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    .hamburger-menu{
+      float:left; 
+    }
+    .content{
+      float:left;
+      width: 100%;
+      .content_links{
+        display: grid;
+        grid-auto-flow: column;
+        margin-bottom: 5px;
+        .content_links_item{
+          text-align: center;  
+          color: #fff;          
+          background: $blue; 
+          text-decoration: none;         
+          
+        } 
+        .active{            
+          background: $green;
+        }
+      }
+      .content__header{
+        background: $green;
+        text-align: center;  
+        color: #fff;         
+      }     
+      .content__body{
+       
+      } 
+    }
+
+}
+/*about*/
+.about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 15px;
+  width: 700px;
+  padding: 20px;
+  margin: 0 auto;
+  .about__btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    
+   }
+}
+
+
+/*numberrooms*/
+.numberrooms{
+  
+  .numberrooms__title{
+    background: $green;
+    text-align: center;  
+    color: #fff;   
+    margin: 5px 0;      
+  }
+  .numberrooms__header{
+    padding: 8px 0;
+    .numberrooms__header-title {
+      font-size: 15px;
+    }
+  }
+.numberrooms__newitem, .numberrooms__rooms{
+  li{ 
+    &:not(:last-child) {
+      border-right: 1px #b4b0b0 solid;
+     }
+   }
+
+}
+ 
+  .numberrooms-table{
+     
+      list-style: none;
+      margin: 0;
+      padding: 2px 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) repeat(3, 2fr);;
+      column-gap: 1px; 
+      text-align: center;
+      align-items: center;
+      font-size: 12px;
+      border-bottom: 1px #b4b0b0 solid;
+
+       
+    select{
+      padding: 0; 
+       
+    }
+     input{
+      padding: 0;
+      border: none;
+      width: 100%;
+      text-align: center;
+     } 
+  }
+  .catrooms-table{
+    
+    grid-template-columns: repeat(2, 1fr) repeat(2, 2fr);;
+  }
+
+}
+
+/*saleschannels*/
+.saleschannels{
+    .saleschannels-table {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+    }
+
+    .saleschannels-header {
+      font-weight: 600;
+      font-size: 17px;
+    }
+    .saleschannels-title {
+      border: none;
+      font-size: 14px;
+    }
+}
+
+/* prices*/
+.prices{      
+    .prices__header {
+      font-size: 16px;
+      padding: 10px 3vw;
+    }
+    .rate__left-title {
+      font-size: 13px;
+    }
+    .rate__dates{
+      .rate__dates-w {
+        font-size: 10px;
+      }
+  
+      .rate__dates-m {
+        font-size: 10px;
+      }
+  
+      .rate__dates-d {
+        font-size: 13px;
+      }
+    }
+
+    
+
+
+
+    .rate__prices-item p {
+      font-size: 13px;
+    }
+
+    .rate__status-item {
+      background: #ffc000;
+    }
+
+}

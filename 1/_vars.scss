@@ -14,9 +14,30 @@ select, input, button{
     cursor: pointer;
 }
     
-button{
+.btn_yellow{
     background-image: linear-gradient(to top, #ffc000, #ffde2a);
     padding: 5px 25px;
     border: none;
     font-size: 14px;
   }
+
+  .btn_green{
+     
+    padding: 2px 5px;
+    border: solid 1px $green;
+    font-size: 10px;
+    color: $green;
+  }
+  .btn_blue{
+     
+    padding: 2px 5px;
+    border: solid 1px $blue;
+    font-size: 10px;
+    color: $blue;
+  }
+  .btn_emo{
+    border: none;
+    padding: 2px 5px;
+    text-decoration: underline;
+    color: #000;
+  } 
