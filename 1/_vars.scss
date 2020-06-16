@@ -2,42 +2,6 @@ $grey: #f6f6f6;
 $green: #6cd900;
 $green_text: #69d500;
 $blue: #00add8;
+$orange: #ffc000;
 
 
-
-select, input, button{
-    padding: 8px;
-    border-radius: 4px;
-    outline: none;
-    border: 1px solid #a5a5a5; 
-    background-color: #fff; 
-    cursor: pointer;
-}
-    
-.btn_yellow{
-    background-image: linear-gradient(to top, #ffc000, #ffde2a);
-    padding: 5px 25px;
-    border: none;
-    font-size: 14px;
-  }
-
-  .btn_green{
-     
-    padding: 2px 5px;
-    border: solid 1px $green;
-    font-size: 10px;
-    color: $green;
-  }
-  .btn_blue{
-     
-    padding: 2px 5px;
-    border: solid 1px $blue;
-    font-size: 10px;
-    color: $blue;
-  }
-  .btn_emo{
-    border: none;
-    padding: 2px 5px;
-    text-decoration: underline;
-    color: #000;
-  } 

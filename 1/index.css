@@ -47,44 +47,6 @@ input, button, textarea, select {
   }
 }
 
-select, input, button {
-  padding: 8px;
-  border-radius: 4px;
-  outline: none;
-  border: 1px solid #a5a5a5;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.btn_yellow {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffc000), to(#ffde2a));
-  background-image: linear-gradient(to top, #ffc000, #ffde2a);
-  padding: 5px 25px;
-  border: none;
-  font-size: 14px;
-}
-
-.btn_green {
-  padding: 2px 5px;
-  border: solid 1px #6cd900;
-  font-size: 10px;
-  color: #6cd900;
-}
-
-.btn_blue {
-  padding: 2px 5px;
-  border: solid 1px #00add8;
-  font-size: 10px;
-  color: #00add8;
-}
-
-.btn_emo {
-  border: none;
-  padding: 2px 5px;
-  text-decoration: underline;
-  color: #000;
-}
-
 #menu__toggle {
   opacity: 0;
   display: none;
@@ -179,10 +141,15 @@ select, input, button {
 
 .menu__box .active {
   color: #69d500;
+  background-color: #f6f6f6;
 }
 
 .menu__item:hover {
   background-color: #CFD8DC;
+}
+
+.active {
+  background-color: #6cd900;
 }
 
 body {
@@ -216,7 +183,7 @@ header .logo img {
 }
 
 header .select__hotel {
-  padding: 0 230px;
+  padding-right: 10%;
   font-size: 16px;
   font-weight: 500;
 }
@@ -242,17 +209,13 @@ header .select__hotel {
   display: grid;
   grid-auto-flow: column;
   margin-bottom: 5px;
+  background: #00add8;
 }
 
 .main .content .content_links .content_links_item {
   text-align: center;
   color: #fff;
-  background: #00add8;
   text-decoration: none;
-}
-
-.main .content .content_links .active {
-  background: #6cd900;
 }
 
 .main .content .content__header {
@@ -278,7 +241,8 @@ header .select__hotel {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  justify-items: left;
+  padding-top: 20px;
 }
 
 /*numberrooms*/
@@ -358,32 +322,259 @@ header .select__hotel {
 }
 
 /* prices*/
-.prices .prices__header {
-  font-size: 16px;
-  padding: 10px 3vw;
+.prices .rate {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.prices .rate__left-title {
+.prices .rate th, .prices .rate td {
+  border: 1px solid #c5c5c5;
+  min-width: 50px;
+  text-align: center;
+}
+
+.prices .rate .holiday {
+  background: #fff4f4;
+}
+
+.prices .rate .rate__header {
+  caption-side: top;
+  text-align: left;
+  padding: 10px 70px;
+  font-size: 17px;
+}
+
+.prices .rate .rate__left-title {
   font-size: 13px;
+  background: #fff;
+  width: 20%;
+  min-width: 95px;
+  text-align: left;
+  padding-left: 10px;
 }
 
-.prices .rate__dates .rate__dates-w {
+.prices .rate .rate__date .rate__date-w {
   font-size: 10px;
 }
 
-.prices .rate__dates .rate__dates-m {
-  font-size: 10px;
+.prices .rate .rate__date .rate__date-m {
+  font-size: 12px;
+  font-weight: 100;
 }
 
-.prices .rate__dates .rate__dates-d {
+.prices .rate .rate__date .rate__date-d {
   font-size: 13px;
 }
 
-.prices .rate__prices-item p {
-  font-size: 13px;
-}
-
-.prices .rate__status-item {
+.prices .rate .rate__status {
   background: #ffc000;
+}
+
+.prices .rate .rate__prices-item {
+  font-size: 13px;
+}
+
+/*panel*/
+.panel {
+  background: #f6f6f6;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 10% 20px 0;
+}
+
+.panel .calendar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 10px;
+}
+
+.panel .calendar button {
+  border-radius: 0px;
+  border: none;
+  background: #e4e4e4;
+  height: 40px;
+  padding: 0 1.2em;
+}
+
+.panel .calendar button:hover {
+  background: #d3d3d3;
+}
+
+.panel .calendar .calendar__select {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 1px;
+}
+
+.panel .calendar .calendar__select .calendar__icon {
+  border-radius: 4px 0 0 4px;
+}
+
+.panel .calendar .calendar__select .calendar__icon .svg-calendar {
+  height: 16px;
+}
+
+.panel .calendar .calendar__select .calendar__today {
+  border-radius: 0 4px 4px 0;
+}
+
+.panel .calendar .calendar__move {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 1px;
+}
+
+.panel .calendar .calendar__move .move__prev {
+  border-radius: 4px 0 0 4px;
+}
+
+.panel .calendar .calendar__move .move__next {
+  border-radius: 0 4px 4px 0;
+}
+
+.panel .calendar .calendar__move .svg-prev {
+  height: 10px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.panel .calendar .calendar__move .svg-next {
+  height: 10px;
+}
+
+/*form*/
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  font-size: 13px;
+  background: #a19e9e96;
+  width: 100%;
+  height: 100%;
+}
+
+.form-popup input, .form-popup select {
+  padding: 0;
+  max-width: 150px;
+}
+
+.form-popup .form-popup__g1-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
+}
+
+.form-popup .form-popup__g1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(120px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 5px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 100px auto;
+  -webkit-box-shadow: 1px 2px 16px 2px #000;
+          box-shadow: 1px 2px 16px 2px #000;
+  padding: 2%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-size: 14px;
+}
+
+select, input, button {
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #a5a5a5;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn_yellow {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffc000), to(#ffde2a));
+  background-image: linear-gradient(to top, #ffc000, #ffde2a);
+  padding: 5px 10px;
+  border: none;
+  font-size: 13px;
+}
+
+.btn_green {
+  padding: 2px 5px;
+  border: solid 1px #6cd900;
+  font-size: 10px;
+  color: #6cd900;
+}
+
+.btn_blue {
+  padding: 2px 5px;
+  border: solid 1px #00add8;
+  font-size: 10px;
+  color: #00add8;
+}
+
+.btn_emo {
+  border: none;
+  padding: 2px 5px;
+  text-decoration: underline;
+  color: #000;
+}
+
+.bg-orange {
+  background-color: #ffc000;
+}
+
+.bg-blue {
+  background-color: #00add8;
+}
+
+.svg-lock {
+  width: 12px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=index.css.map */

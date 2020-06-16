@@ -154,6 +154,7 @@ input, button, textarea, select {
 
 body {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -202,6 +203,20 @@ header .select__hotel {
 .main .content {
   float: left;
   width: 100%;
+  overflow-x: auto;
+}
+
+.main .content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.main .content::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.main .content::-webkit-scrollbar-thumb {
+  background: #ccc;
 }
 
 .main .content .content_links {
@@ -222,6 +237,10 @@ header .select__hotel {
   background: #6cd900;
   text-align: center;
   color: #fff;
+}
+
+.main .content .content__body {
+  padding-bottom: 50px;
 }
 
 /*about*/
@@ -246,13 +265,6 @@ header .select__hotel {
 }
 
 /*numberrooms*/
-.numberrooms .numberrooms__title {
-  background: #6cd900;
-  text-align: center;
-  color: #fff;
-  margin: 5px 0;
-}
-
 .numberrooms .numberrooms__header {
   padding: 8px 0;
 }
@@ -322,57 +334,117 @@ header .select__hotel {
 }
 
 /* prices*/
-.prices .rate {
+.prices {
+  overflow-x: auto;
+  max-height: calc(100vh - 120px);
+}
+
+.prices::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.prices::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.prices::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+.prices .table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20px;
+  font-size: 13px;
 }
 
-.prices .rate th, .prices .rate td {
+.prices .table th, .prices .table td {
   border: 1px solid #c5c5c5;
-  min-width: 50px;
   text-align: center;
+  position: relative;
 }
 
-.prices .rate .holiday {
+.prices .table td:nth-of-type(1) {
+  min-width: 230px;
+}
+
+.prices .table td:nth-of-type(n+2) {
+  min-width: 37px;
+  width: 37px;
+}
+
+.prices .table .holiday {
   background: #fff4f4;
 }
 
-.prices .rate .rate__header {
+.prices .table .table__header {
   caption-side: top;
   text-align: left;
   padding: 10px 70px;
   font-size: 17px;
 }
 
-.prices .rate .rate__left-title {
-  font-size: 13px;
+.prices .table td:nth-of-type(5) {
+  background: rgba(255, 38, 38, 0.33);
+}
+
+.prices .table .table__left-title {
   background: #fff;
-  width: 20%;
-  min-width: 95px;
   text-align: left;
   padding-left: 10px;
 }
 
-.prices .rate .rate__date .rate__date-w {
+.prices .table .table__date {
+  pointer-events: none;
+}
+
+.prices .table .table__date .table__date-w {
   font-size: 10px;
 }
 
-.prices .rate .rate__date .rate__date-m {
-  font-size: 12px;
+.prices .table .table__date .table__date-m {
+  font-size: 10px;
   font-weight: 100;
 }
 
-.prices .rate .rate__date .rate__date-d {
-  font-size: 13px;
-}
-
-.prices .rate .rate__status {
+.prices .table .table__status {
   background: #ffc000;
 }
 
-.prices .rate .rate__prices-item {
-  font-size: 13px;
+.prices .table .table__available .table__available-item {
+  font-weight: 100;
+  pointer-events: none;
+}
+
+.prices .table .table__room {
+  padding: 6px 0 2px 32px;
+  line-height: 1em;
+}
+
+.prices .table .table__room .table__room-comment {
+  color: #666;
+  font-size: 11px;
+}
+
+.prices .table .booking {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 20px;
+  width: 339px;
+  height: 25px;
+  background-color: #b5d589;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 4px 0px #000;
+          box-shadow: 1px 1px 4px 0px #000;
+}
+
+.prices .table .booking .booking__name {
+  text-align: left;
+  padding: 3px 5px;
+  font-weight: 600;
 }
 
 /*panel*/
@@ -382,7 +454,7 @@ header .select__hotel {
   bottom: 0;
   right: 0;
   width: 100%;
-  padding: 20px 10% 20px 0;
+  padding: 10px 10% 10px 0;
 }
 
 .panel .calendar {
@@ -482,8 +554,7 @@ header .select__hotel {
 }
 
 .form-popup input, .form-popup select {
-  padding: 0;
-  max-width: 150px;
+  padding: 0 5px;
 }
 
 .form-popup .form-popup__g1-2 {
@@ -500,6 +571,13 @@ header .select__hotel {
   -ms-grid-columns: (minmax(120px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 5px;
+}
+
+.form-popup .form-popup__gauto {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
 }
 
 /* Add styles to the form container */
@@ -525,6 +603,14 @@ fieldset {
 
 legend {
   font-size: 14px;
+}
+
+.content__title {
+  background: #6cd900;
+  text-align: center;
+  color: #fff;
+  margin: 5px 0;
+  font-size: 16px;
 }
 
 select, input, button {
@@ -565,6 +651,28 @@ select, input, button {
   color: #000;
 }
 
+.btn_text {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10px auto;
+      grid-template-columns: 10px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn_text:hover {
+  color: #fc5218;
+}
+
+.btn_text:hover .svg-arrow {
+  fill: #fc5218;
+}
+
 .bg-orange {
   background-color: #ffc000;
 }
@@ -576,5 +684,17 @@ select, input, button {
 .svg-lock {
   width: 12px;
   margin: 0 auto;
+}
+
+.svg-arrow {
+  height: 10px;
+  width: 10px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.rotate90 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 /*# sourceMappingURL=index.css.map */
