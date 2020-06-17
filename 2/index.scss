@@ -47,7 +47,8 @@ header{
     .content{
       float:left;
       width: 100%;
-      overflow-x: auto;
+      overflow-x: scroll;
+    /*  overflow: auto;
        
     &::-webkit-scrollbar {
       -webkit-appearance: none;
@@ -58,7 +59,7 @@ header{
       background-color: rgba(0,0,0,.5);
       -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
   }
-    
+    */
 
 
       .content_links{
@@ -81,11 +82,11 @@ header{
       }     
       .content__body{
         padding-bottom: 50px;
-        overflow-x: auto;
+      /*  overflow-x: auto;
     &::-webkit-scrollbar {width: 8px; height: 8px;}
     &::-webkit-scrollbar-track {background: #eee;}
     &::-webkit-scrollbar-thumb {background: #ccc;} 
-       
+      */ 
       } 
     }
 
@@ -184,9 +185,10 @@ header{
 /* prices*/
 .prices{   
     max-height: calc(100vh - 150px);
+  /*  overflow-x: scroll;
     overflow: auto;
-   position: relative;
-   /*     
+   
+        
     &::-webkit-scrollbar {
       -webkit-appearance: none;
       width: 7px;
@@ -203,17 +205,13 @@ header{
       width: 100%;
       margin-bottom: 20px;
       font-size: 13px;
-      overflow-x: auto;
-    display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
+
+      display: inline-block;
+    /* max-width: 100%; */
     overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    
-    &::-webkit-scrollbar {width: 8px; height: 8px;}
-    &::-webkit-scrollbar-track {background: #eee;}
-    &::-webkit-scrollbar-thumb {background: #ccc;} 
+      
+   
+     
       th, td{
         border: 1px solid $grey*0.8; 
         text-align: center;

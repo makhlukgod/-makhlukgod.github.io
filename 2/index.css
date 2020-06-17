@@ -203,18 +203,19 @@ header .select__hotel {
 .main .content {
   float: left;
   width: 100%;
-  overflow-x: auto;
-}
-
-.main .content::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
-}
-
-.main .content::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  overflow-x: scroll;
+  /*  overflow: auto;
+       
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
+    */
 }
 
 .main .content .content_links {
@@ -239,20 +240,11 @@ header .select__hotel {
 
 .main .content .content__body {
   padding-bottom: 50px;
-  overflow-x: auto;
-}
-
-.main .content .content__body::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.main .content .content__body::-webkit-scrollbar-track {
-  background: #eee;
-}
-
-.main .content .content__body::-webkit-scrollbar-thumb {
-  background: #ccc;
+  /*  overflow-x: auto;
+    &::-webkit-scrollbar {width: 8px; height: 8px;}
+    &::-webkit-scrollbar-track {background: #eee;}
+    &::-webkit-scrollbar-thumb {background: #ccc;} 
+      */
 }
 
 /*about*/
@@ -352,9 +344,10 @@ header .select__hotel {
 /* prices*/
 .prices {
   max-height: calc(100vh - 150px);
-  overflow: auto;
-  position: relative;
-  /*     
+  /*  overflow-x: scroll;
+    overflow: auto;
+   
+        
     &::-webkit-scrollbar {
       -webkit-appearance: none;
       width: 7px;
@@ -372,26 +365,9 @@ header .select__hotel {
   width: 100%;
   margin-bottom: 20px;
   font-size: 13px;
-  overflow-x: auto;
   display: inline-block;
-  vertical-align: top;
-  max-width: 100%;
+  /* max-width: 100%; */
   overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.prices .table::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.prices .table::-webkit-scrollbar-track {
-  background: #eee;
-}
-
-.prices .table::-webkit-scrollbar-thumb {
-  background: #ccc;
 }
 
 .prices .table th, .prices .table td {
