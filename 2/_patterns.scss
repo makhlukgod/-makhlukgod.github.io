@@ -71,6 +71,7 @@ select, input, button{
   background-color: $blue;
 } 
 .svg-lock{
+  min-width: 12px;
   width: 12px;
   margin: 0 auto;
 }
