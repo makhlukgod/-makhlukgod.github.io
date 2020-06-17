@@ -185,6 +185,7 @@ header{
 /* prices*/
 .prices{   
     max-height: calc(100vh - 150px);
+    overflow-x: scroll;
   /*  overflow-x: scroll;
     overflow: auto;
    
@@ -206,9 +207,7 @@ header{
       margin-bottom: 20px;
       font-size: 13px;
 
-      display: inline-block;
-    /* max-width: 100%; */
-    overflow-x: auto;
+     
       
    
      

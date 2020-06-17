@@ -344,6 +344,7 @@ header .select__hotel {
 /* prices*/
 .prices {
   max-height: calc(100vh - 150px);
+  overflow-x: scroll;
   /*  overflow-x: scroll;
     overflow: auto;
    
@@ -365,9 +366,6 @@ header .select__hotel {
   width: 100%;
   margin-bottom: 20px;
   font-size: 13px;
-  display: inline-block;
-  /* max-width: 100%; */
-  overflow-x: auto;
 }
 
 .prices .table th, .prices .table td {
