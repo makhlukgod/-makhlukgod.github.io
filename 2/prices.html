@@ -274,7 +274,7 @@
                 <tbody>
                    <tr  class="table__prices">
                       <td  class="table__left-title">
-                         <button   class="btn_blue" onclick="openFormPrice()">Цена за номер</button>
+                         <button   class="btn_formprice btn_blue">Цена за номер</button>
                          </td>
                       
                       <td  class="table__prices-item holiday"> 
@@ -371,7 +371,7 @@
                   </tr>
                   <tr  class="table__rule">
                      <td  class="table__left-title">
-                      <button id="form__close" class="btn_blue" onclick="openFormRule()">Группа правил</button>
+                      <button id="form__close" class="btn_formprule btn_blue">Группа правил</button>
                       </td>
                      <td  class="table__rule-item holiday"> 
                         <img class="svg-lock" src="lock.svg">
@@ -694,7 +694,7 @@
                 <tbody>
                    <tr  class="table__prices">
                       <td  class="table__left-title">
-                         <button   class="btn_blue" onclick="openFormPrice()">Цена за номер</button>
+                         <button   class="btn_formprice btn_blue">Цена за номер</button>
                          </td>
                       
                       <td  class="table__prices-item holiday"> 
@@ -791,7 +791,7 @@
                   </tr>
                   <tr  class="table__rule">
                      <td  class="table__left-title">
-                      <button id="form__close" class="btn_blue" onclick="openFormRule()">Группа правил</button>
+                      <button id="form__close" class="btn_formprule btn_blue">Группа правил</button>
                       </td>
                      <td  class="table__rule-item holiday"> 
                         <img class="svg-lock" src="lock.svg">
@@ -1114,7 +1114,7 @@
                 <tbody>
                    <tr  class="table__prices">
                       <td  class="table__left-title">
-                         <button   class="btn_blue" onclick="openFormPrice()">Цена за номер</button>
+                         <button   class="btn_formprice btn_blue">Цена за номер</button>
                          </td>
                       
                       <td  class="table__prices-item holiday"> 
@@ -1211,7 +1211,7 @@
                   </tr>
                   <tr  class="table__rule">
                      <td  class="table__left-title">
-                      <button id="form__close" class="btn_blue" onclick="openFormRule()">Группа правил</button>
+                      <button id="form__close" class="btn_formprule btn_blue">Группа правил</button>
                       </td>
                      <td  class="table__rule-item holiday"> 
                         <img class="svg-lock" src="lock.svg">
@@ -1477,19 +1477,54 @@
          
        </form>
      </div>
-   <script>
-      function openFormPrice() {
-        document.getElementById("priceForm").style.display = "block";
-      }
-      function openFormRule() {
-        document.getElementById("ruleForm").style.display = "block";
-      }
+   
+     <script>
+      /*сворачивание номеров во всех блоке*/
+            
+            $('.btn-all-toggle').on('click', function () {
+               if($(this).find('.svg-arrow').hasClass('rotate90')){            
+                  $(this).nextAll('.rooms').show(200); 
+                   $(this).parent().find('.svg-arrow').removeClass('rotate90');  
+               }else{
+                  $(this).nextAll('.rooms').hide(200); 
+                   $(this).parent().find('.svg-arrow').addClass('rotate90'); 
+               }  
+            });
+         /*сворачивание номеро в соответстующем блоке*/   
+            $('.btn-cat-toggle').on('click', function () {
+                  $(this).next('.rooms').slideToggle(200);
+                  $(this).find('.svg-arrow').toggleClass('rotate90');
+            });  
       
-      function closeForm() {
-        document.getElementById("priceForm").style.display = "none";
-        document.getElementById("ruleForm").style.display = "none";
-      }
-    </script>
+         /*открытие формы цены по клику кнопки*/
+         $('.btn_formprice').on('click', function () {
+                  $('#priceForm').show(); 
+            }); 
+         /*открытие формы правил по клику кнопки*/
+            $('.btn_formprule').on('click', function () {
+                  $('#ruleForm').show(); 
+            }); 
+         /*открытие формы бронирования по клику в полоски бронирований*/
+            $('.booking').on('click', function () {
+                  $('#bookingForm').show(); 
+            }); 
+           
+         /*закрытие форм по нажатию по .cancel*/
+            $('.cancel').on('click', function () {
+                  $('.form-popup').hide(); 
+            }); 
+      
+         /*закрытие форм по нажатию вне форм*/
+            jQuery(function($){
+               $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+                  var block = $(".form-popup"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+                  if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+                        && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+                        block.hide(); // если условия выполняются - скрываем наш элемент
+                  }
+               });
+            }); 
+          </script>
    
   
 </body>

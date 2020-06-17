@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="index.css?v=2">
    <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -5274,7 +5274,8 @@
          
        </form>
      </div>
-     <div class="form-popup" id="bookingForm">
+     <div class="form-popup " id="bookingForm">
+       
         <form action="#" class="form-container">
            <fieldset>
               <legend>Бронирование:</legend>
@@ -5317,7 +5318,7 @@
               
               <div class=" ">
                <label for="for-data">Комментарий:</label> 
-                 <p><textarea rows="3"  cols="51" name="text"></textarea></p>
+                 <p><textarea rows="3" cols="51" name="text" style="margin: 4px;"></textarea></p>
               </div>
             </fieldset>
              
@@ -5332,52 +5333,55 @@
       
           
         </form>
+         
+        
       </div>
    <script>
-
+/*сворачивание номеров во всех блоке*/
       
       $('.btn-all-toggle').on('click', function () {
          if($(this).find('.svg-arrow').hasClass('rotate90')){            
             $(this).nextAll('.rooms').show(200); 
-             $(this).parent().find('.svg-arrow').removeClass('rotate90'); 
-                          
+             $(this).parent().find('.svg-arrow').removeClass('rotate90');  
          }else{
             $(this).nextAll('.rooms').hide(200); 
-             $(this).parent().find('.svg-arrow').addClass('rotate90');
-             
-         }
-         
-         
-        
+             $(this).parent().find('.svg-arrow').addClass('rotate90'); 
+         }  
       });
-      
+   /*сворачивание номеро в соответстующем блоке*/   
       $('.btn-cat-toggle').on('click', function () {
             $(this).next('.rooms').slideToggle(200);
             $(this).find('.svg-arrow').toggleClass('rotate90');
       });  
 
+   /*открытие формы цены по клику кнопки*/
+   $('.btn_formprice').on('click', function () {
+            $('#priceForm').show(); 
+      }); 
+   /*открытие формы правил по клику кнопки*/
+      $('.btn_formprule').on('click', function () {
+            $('#ruleForm').show(); 
+      }); 
+   /*открытие формы бронирования по клику в полоски бронирований*/
       $('.booking').on('click', function () {
             $('#bookingForm').show(); 
       }); 
-      
- 
-      
-
+     
+   /*закрытие форм по нажатию по .cancel*/
       $('.cancel').on('click', function () {
             $('.form-popup').hide(); 
       }); 
 
-      
-      
-    
-
-
-      function openFormPrice() {
-        document.getElementById("priceForm").style.display = "block";
-      }
-      function openFormRule() {
-        document.getElementById("ruleForm").style.display = "block";
-      } 
+   /*закрытие форм по нажатию вне форм*/
+      jQuery(function($){
+         $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+            var block = $(".form-popup"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+            if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+                  && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+                  block.hide(); // если условия выполняются - скрываем наш элемент
+            }
+         });
+      }); 
     </script>
    
   
