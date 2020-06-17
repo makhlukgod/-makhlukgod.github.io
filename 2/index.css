@@ -239,6 +239,20 @@ header .select__hotel {
 
 .main .content .content__body {
   padding-bottom: 50px;
+  overflow-x: auto;
+}
+
+.main .content .content__body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.main .content .content__body::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.main .content .content__body::-webkit-scrollbar-thumb {
+  background: #ccc;
 }
 
 /*about*/
@@ -339,17 +353,31 @@ header .select__hotel {
 .prices {
   overflow-x: auto;
   max-height: calc(100vh - 150px);
+  overflow-x: auto;
+  /*     
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
+  */
 }
 
 .prices::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
+  width: 8px;
+  height: 8px;
+}
+
+.prices::-webkit-scrollbar-track {
+  background: #eee;
 }
 
 .prices::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  background: #ccc;
 }
 
 .prices .table {
