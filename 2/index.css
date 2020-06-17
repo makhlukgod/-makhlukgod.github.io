@@ -388,6 +388,19 @@ header .select__hotel {
   overflow-x: auto;
 }
 
+.prices .table::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.prices .table::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.prices .table::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
 .prices .table th, .prices .table td {
   border: 1px solid #c5c5c5;
   text-align: center;
