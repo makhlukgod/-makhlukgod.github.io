@@ -240,6 +240,7 @@ header .select__hotel {
 
 .main .content .content__body {
   padding-bottom: 50px;
+  overflow-x: scroll;
   /*  overflow-x: auto;
     &::-webkit-scrollbar {width: 8px; height: 8px;}
     &::-webkit-scrollbar-track {background: #eee;}
