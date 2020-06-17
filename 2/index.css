@@ -193,7 +193,7 @@ header .select__hotel {
   display: grid;
   -ms-grid-columns: auto 1fr;
       grid-template-columns: auto 1fr;
-  max-width: 100vw;
+  max-width: 300px;
 }
 
 .main .hamburger-menu {
