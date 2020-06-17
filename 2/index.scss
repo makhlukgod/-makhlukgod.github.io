@@ -182,13 +182,10 @@ header{
 }
 
 /* prices*/
-.prices{  
-    overflow-x: auto;
+.prices{   
     max-height: calc(100vh - 150px);
-    overflow-x: auto;
-    &::-webkit-scrollbar {width: 8px; height: 8px;}
-    &::-webkit-scrollbar-track {background: #eee;}
-    &::-webkit-scrollbar-thumb {background: #ccc;} 
+    overflow: auto;
+   position: relative;
    /*     
     &::-webkit-scrollbar {
       -webkit-appearance: none;
@@ -207,6 +204,13 @@ header{
       margin-bottom: 20px;
       font-size: 13px;
       overflow-x: auto;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    
     &::-webkit-scrollbar {width: 8px; height: 8px;}
     &::-webkit-scrollbar-track {background: #eee;}
     &::-webkit-scrollbar-thumb {background: #ccc;} 

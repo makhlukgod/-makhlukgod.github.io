@@ -351,9 +351,9 @@ header .select__hotel {
 
 /* prices*/
 .prices {
-  overflow-x: auto;
   max-height: calc(100vh - 150px);
-  overflow-x: auto;
+  overflow: auto;
+  position: relative;
   /*     
     &::-webkit-scrollbar {
       -webkit-appearance: none;
@@ -367,25 +367,18 @@ header .select__hotel {
   */
 }
 
-.prices::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.prices::-webkit-scrollbar-track {
-  background: #eee;
-}
-
-.prices::-webkit-scrollbar-thumb {
-  background: #ccc;
-}
-
 .prices .table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20px;
   font-size: 13px;
   overflow-x: auto;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 
 .prices .table::-webkit-scrollbar {
