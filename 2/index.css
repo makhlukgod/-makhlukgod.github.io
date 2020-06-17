@@ -345,7 +345,7 @@ header .select__hotel {
   max-height: calc(100vh - 190px);
   overflow-x: scroll;
   /*  overflow-x: scroll;
-    overflow: auto;
+    
    
         
     &::-webkit-scrollbar {
@@ -365,6 +365,7 @@ header .select__hotel {
   width: 100%;
   margin-bottom: 20px;
   font-size: 13px;
+  overflow: auto;
 }
 
 .prices .table th, .prices .table td {
