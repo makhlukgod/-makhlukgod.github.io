@@ -159,9 +159,9 @@ body {
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 210px 1fr;
-      grid-template-columns: 210px 1fr;
-  justify-items: end;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -179,13 +179,14 @@ header .logo {
 }
 
 header .logo img {
-  height: 40px;
+  max-height: 40px;
+  min-height: 25px;
 }
 
 header .select__hotel {
-  padding-right: 10%;
   font-size: 16px;
   font-weight: 500;
+  width: 158px;
 }
 
 .main {
@@ -343,7 +344,7 @@ header .select__hotel {
 
 /* prices*/
 .prices {
-  max-height: calc(100vh - 190px);
+  max-height: calc(100vh - 120px);
   overflow-x: scroll;
   /*  overflow-x: scroll;
     
