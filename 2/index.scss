@@ -169,7 +169,7 @@ header{
 /* prices*/
 .prices{  
     overflow-x: auto;
-    max-height: calc(100vh - 120px);
+    max-height: 500px;
     &::-webkit-scrollbar {width: 8px; height: 8px;}
     &::-webkit-scrollbar-track {background: #eee;}
     &::-webkit-scrollbar-thumb {background: #ccc;} 
