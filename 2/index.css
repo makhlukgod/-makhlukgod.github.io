@@ -361,6 +361,19 @@ header .select__hotel {
   */
 }
 
+.prices::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.prices::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.prices::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
 .prices .table {
   border-collapse: collapse;
   width: 100%;

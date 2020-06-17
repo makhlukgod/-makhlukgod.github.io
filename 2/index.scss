@@ -186,6 +186,9 @@ header{
 .prices{   
     max-height: calc(100vh - 190px);
     overflow-x: scroll;
+    &::-webkit-scrollbar {width: 8px; height: 8px;}
+    &::-webkit-scrollbar-track {background: #eee;}
+    &::-webkit-scrollbar-thumb {background: #ccc;} 
   /*  overflow-x: scroll;
     
    
