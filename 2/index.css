@@ -336,7 +336,7 @@ header .select__hotel {
 /* prices*/
 .prices {
   overflow-x: auto;
-  max-height: 200px;
+  max-height: calc(100vh - 120px);
 }
 
 .prices::-webkit-scrollbar {

@@ -48,9 +48,11 @@ header{
       float:left;
       width: 100%;
       overflow-x: auto;
+      
     &::-webkit-scrollbar {width: 8px; height: 8px;}
     &::-webkit-scrollbar-track {background: #eee;}
     &::-webkit-scrollbar-thumb {background: #ccc;}
+    
 
 
       .content_links{
@@ -169,7 +171,8 @@ header{
 /* prices*/
 .prices{  
     overflow-x: auto;
-    max-height: 200px;
+    max-height: calc(100vh - 120px);
+    
     &::-webkit-scrollbar {width: 8px; height: 8px;}
     &::-webkit-scrollbar-track {background: #eee;}
     &::-webkit-scrollbar-thumb {background: #ccc;} 
