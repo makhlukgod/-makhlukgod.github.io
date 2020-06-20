@@ -324,14 +324,7 @@ header .select__hotel {
 
 /*saleschannels*/
 .saleschannels .saleschannels-table {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 20px;
 }
 
 .saleschannels .saleschannels-header {
@@ -339,9 +332,23 @@ header .select__hotel {
   font-size: 17px;
 }
 
-.saleschannels .saleschannels-title {
+.saleschannels .saleschannels-li {
   border: none;
-  font-size: 14px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 25px;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.saleschannels button:hover {
+  background: #eaf9de;
 }
 
 /* prices*/

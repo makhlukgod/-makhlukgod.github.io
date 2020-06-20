@@ -169,20 +169,27 @@ header{
 /*saleschannels*/
 .saleschannels{
     .saleschannels-table {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      align-items: center;
+      padding-top: 20px;
     }
 
     .saleschannels-header {
       font-weight: 600;
       font-size: 17px;
     }
-    .saleschannels-title {
+    .saleschannels-li {
       border: none;
-      font-size: 14px;
+      display: grid;
+        grid-template-columns: 2fr 1fr; 
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+      font-size: 25px;
+      border-bottom: 1px solid $grey;
+      
     }
+    button:hover {
+      background: $green_hover;
+    } 
 }
 
 /* prices*/
